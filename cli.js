@@ -16,11 +16,11 @@ let cli     = meow( `
     $ credits /projects/foo
     $ credits /projects/foo --reporter extended
     $ credits /projects/foo --reporter markdown > THANKS.md`,
-  {
-    alias : {
-      r : 'reporter'
-    }
+{
+  alias : {
+    r : 'reporter'
   }
+}
 );
 
 let reporters = fs.readdirSync( path.resolve( __dirname, 'reporters' ) ).reduce(
